@@ -1,8 +1,8 @@
 {
-	"name": "jstewmc/url",
-	"description": "A class for handling hierarchical paths in PHP",
+	"name": "jstewmc/path",
+	"description": "A class for handling paths in PHP",
 	"license": "MIT",
-	"keywords": ["php", "path", "hierarchy"],
+	"keywords": ["php", "path", "string", "hierarchy"],
 	"authors": [
 		{
 			"name": "Jack Clayton",
