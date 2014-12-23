@@ -1,0 +1,21 @@
+{
+	"name": "jstewmc/url",
+	"description": "A class for handling hierarchical paths in PHP",
+	"license": "MIT",
+	"keywords": ["php", "path", "hierarchy"],
+	"authors": [
+		{
+			"name": "Jack Clayton",
+			"email": "clayjs0@gmail.com"	
+		}
+	],
+	"require": {},
+	"require-dev": {
+		"phpunit/phpunit": "4.2.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Jstewmc\\Path\\": "src/"
+		}
+	}
+}
