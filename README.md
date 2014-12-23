@@ -10,10 +10,12 @@ A path is a route through a hierarchy, for example, a folder in a file system or
 $path = new Path('foo/bar/baz');
 
 $path->getSegment('first');  // returns 'foo'
+$path->getSegment(1);        // returns 'bar'
 
-$path-appendSegment('qux'); 
+$path-appendSegment('qux');     // path becomes 'foo/bar/baz/qux'
+$path->prependSegment('quux');  // path becomes 'quux/foo/bar/baz/qux'
 
-echo $path;  // prints 'foo/bar/baz/qux'
+echo $path;  // prints 'quux/foo/bar/baz/qux'
 ``` 
 
 Feel free to check out the [API documentation](https://jstewmc.github.io/path/api/0.1.0), [report an issue](https://github.com/jstewmc/path/issues), [contribute](https://github.com/jstewmc/url/blob/master/CONTRIBUTING.md), or [ask a question](mailto:clayjs0@gmail.com). 
@@ -100,12 +102,10 @@ You can slice and reverse the current path:
 ```php
 $path = new Path('foo/bar/baz');
 
-// slice the path
 $path->slice(1);
 
 echo $path;  // prints "bar/baz"
 
-// reverse the path
 $path->reverse();
 
 echo $path;  // prints "baz/bar"
@@ -116,13 +116,11 @@ Or, you can slice and reverse a clone:
 ```php
 $a = new Path('foo/bar/baz');
 
-// get a new slice path
 $b = $a->getSlice(1); 
 
 echo $a;  // prints 'foo/bar/baz'
 echo $b;  // prints 'bar/baz'
 
-// get a new reversed path
 $c = $a->getReverse();
 
 echo $a;  // prints 'foo/bar/baz'
@@ -132,7 +130,7 @@ echo $c;  // prints 'baz/bar/foo'
 Tests
 -----
 
-Tests cover more than 90% of the code. I'm not exactly sure what's missing, because I'm pretty sure I wrote tests for everything. If you see something, let me know.
+Tests cover more than 90% of the code. I'm not exactly sure what's missing, because I'm pretty sure I wrote tests for everything. If you see something missing, let me know.
 
 Contributing
 ------------
