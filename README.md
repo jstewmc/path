@@ -1,4 +1,4 @@
-path
+Path
 ====
 
 A class for dealing with string paths in PHP.
